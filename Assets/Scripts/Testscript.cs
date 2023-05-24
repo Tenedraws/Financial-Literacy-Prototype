@@ -4,20 +4,10 @@ using UnityEngine;
 
 public class Testscript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void Test()
     {
-        FinancialAccount.Instance.AffectAccount(-20, false, expenseType.food);
+        print("testing");
+        //MainUIElements.Instance.UpdateHappiness(-50);
     }
 }
