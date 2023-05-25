@@ -3,7 +3,7 @@ using UnityEngine;
 public class PetStats : Singleton<PetStats>
 {
     float happiness = 100;
-    float financialSecurity = 100;
+    float financialSecurity;
     float health = 100;
 
     public float getHappiness => happiness;
@@ -20,19 +20,23 @@ public class PetStats : Singleton<PetStats>
         if (happiness <= 0)
         {
             GameOver();
+            Endscreen.Instance.endText.text = "GAME OVER \n Your happiness hit 0. Seems like you were neglecting your emotional health." +
+                                              "Being financially responsible doesn't mean never giving into your wants, instead try to enjoy yourself responsibly with your money.";
+            return;
         }
     }
 
-    public void AffectFinancialSecurity(float amount)
+    public void AffectFinancialSecurity()
     {
-        financialSecurity += amount;
-        if (financialSecurity > 100)
-        {
-            financialSecurity = 100;
-        }
+        //assuming that pet ideal security is $100 more than monthly payable
+        float safetyNet = FinancialAccount.Instance.getMonthlyPayable + 100;
+        financialSecurity = FinancialAccount.Instance.getCurrentBalance / safetyNet;
         if (financialSecurity <= 0)
         {
             GameOver();
+            Endscreen.Instance.endText.text = "GAME OVER \n Your financial security hit 0. Seems like you were being a bit too frivilous with your expenses." +
+                                              "It is important to always be aware of how much money you have before you spend it. Next time, try to be more away of your expenses and budget accordingly.";
+            return;
         }
     }
 
@@ -46,11 +50,15 @@ public class PetStats : Singleton<PetStats>
         if (health <= 0)
         {
             GameOver();
+            Endscreen.Instance.endText.text = "GAME OVER \n Your health hit 0. Seems like you weren't taking care of yourself enough." +
+                                              "Your health takes priority above all else. Remember not to neglect it even while you're taking care of your finances.";
+            return;
         }
     }
 
     void GameOver()
     {
-        Debug.Log("Gameover");
+        UIManager.Instance.Open(GameUIID.EndScreen);
+        Time.timeScale = 0f; 
     }
 }

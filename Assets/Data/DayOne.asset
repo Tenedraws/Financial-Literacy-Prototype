@@ -13,14 +13,7 @@ MonoBehaviour:
   m_Name: DayOne
   m_EditorClassIdentifier: 
   events:
-  - time: 5
-    msg: Breakfast
-    eventDescription: 'It''s time for breakfast! '
-    buttonBehaviors:
-    - {fileID: 11400000, guid: 962e74059206b694c9cf518587fa44a9, type: 2}
-    - {fileID: 11400000, guid: 294c403f0dd9e3b43bdd342e8ff7a154, type: 2}
-    - {fileID: 11400000, guid: 7b6645cc534a1684bb2a1785988ce7a0, type: 2}
-  - time: 5
+  - time: 10
     msg: Breakfast
     eventDescription: 'It''s time for breakfast! '
     buttonBehaviors:

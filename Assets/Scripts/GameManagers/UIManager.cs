@@ -73,5 +73,9 @@ public enum GameUIID
 {
     GameHud,
     Choices,
-    Result
+    Result,
+    EndScreen,
+    Aspiration,
+    OpeningScene,
+    Expenses
 }

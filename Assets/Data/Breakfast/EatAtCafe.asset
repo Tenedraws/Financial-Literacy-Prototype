@@ -15,9 +15,11 @@ MonoBehaviour:
   Name: EatAtCafe
   Description: Eat at Cafe
   moneyAffect: -20
+  allowanceAffect: 0
+  monthlyPayableaffect: 0
   expenseType: 0
   gain: 0
   happinessAffect: 20
-  financialSecurityAffect: -10
   healthAffect: 10
-  result: 
+  result: You decide to treat yourself by going out to a nearby cafe. Your meal is
+    delicious.

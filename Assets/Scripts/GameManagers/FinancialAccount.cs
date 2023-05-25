@@ -3,17 +3,30 @@ using UnityEngine;
 
 public class FinancialAccount : Singleton<FinancialAccount>
 {
-    public float allowance;
-    float currentBalance;
+    public float allowance = 200;
+    float currentBalance = 0;
     public float getCurrentBalance => currentBalance;
 
     float totalDailyExpense;
     public float getTotalDailyExpense => totalDailyExpense;
     public Dictionary<expenseType, float> expenses = new Dictionary<expenseType, float>();
 
+    float monthlyPayable = 100; 
+    public float getMonthlyPayable => monthlyPayable;
+
     protected override void Awake()
     {
         base.Awake();
+    }
+
+    public void AddAllowance()
+    {
+        currentBalance += allowance;
+    }
+
+    public void AffectAllowance(float amount)
+    {
+        allowance += amount; 
     }
 
     public void AffectAccount(float amount, bool gain, expenseType type = expenseType.other)
@@ -31,6 +44,16 @@ public class FinancialAccount : Singleton<FinancialAccount>
             totalDailyExpense += expense;
             expenses[type] += expense;
         }
+    }
+
+    public void AffectMonthlyPayable(float amount)
+    {
+        monthlyPayable += amount; 
+    }
+
+    public void PayMonthlyPayable()
+    {
+        currentBalance -= monthlyPayable;
     }
 }
 

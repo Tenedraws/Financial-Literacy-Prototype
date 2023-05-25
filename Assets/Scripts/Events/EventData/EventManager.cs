@@ -10,9 +10,6 @@ public class EventManager : MonoBehaviour
     TimeTracker timeTracker;
     int eventIndex;
 
-    [SerializeField]
-    List<ButtonSetter> buttonSetter;
-
     private void Start()
     {
         timeTracker = TimeTracker.Instance;
@@ -23,22 +20,14 @@ public class EventManager : MonoBehaviour
         {
             return;
         }
-        if(timeTracker.timer > eventData.events[eventIndex].time)
+        if(timeTracker.hour >= eventData.events[eventIndex].time)
         {
             Debug.Log(eventData.events[eventIndex].msg);
-            initializeButtons(eventData.events[eventIndex].buttonBehaviors);
+            UIManager.Instance.Open(GameUIID.Choices);
+            Time.timeScale = 0f; 
+            ChoicesElements.Instance.initializeButtons(eventData.events[eventIndex].buttonBehaviors);
+            ChoicesElements.Instance.scenario.text = eventData.events[eventIndex].eventDescription;
             eventIndex += 1; 
-        }
-    }
-
-    public void initializeButtons(List<ButtonBehavior> buttonBehaviors)
-    {
-        for(int i = 0; i < buttonBehaviors.Count; i++)
-        {
-            buttonSetter[i].gameObject.SetActive(true);
-            buttonSetter[i].Clean();
-            buttonSetter[i].buttonBehavior = buttonBehaviors[i];
-            buttonSetter[i].Set(buttonBehaviors[i]);
         }
     }
 }

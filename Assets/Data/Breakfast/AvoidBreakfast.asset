@@ -15,9 +15,10 @@ MonoBehaviour:
   Name: Nobreakfast
   Description: Skip Breakfast
   moneyAffect: 0
+  allowanceAffect: 0
+  monthlyPayableaffect: 0
   expenseType: 0
   gain: 1
   happinessAffect: -20
-  financialSecurityAffect: 10
   healthAffect: -15
-  result: 
+  result: 'You avoid Breakfast. '

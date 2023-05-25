@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 1829047619168908083}
   - component: {fileID: 1829047619168908082}
   - component: {fileID: 1829047619168908085}
-  - component: {fileID: 1829047619168908081}
-  - component: {fileID: 1829047619168908094}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -102,36 +100,3 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1829047619168908081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829047619168908084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 611fd76729106a94492fe3cf67f0ad0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  happiness: {fileID: 0}
-  financialSecurity: {fileID: 0}
-  health: {fileID: 0}
-  expenses: {fileID: 0}
---- !u!114 &1829047619168908094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829047619168908084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8696d2e3b36418749a63336a0648a988, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventData: {fileID: 11400000, guid: 37aff2c8b25a3fe4a85e3aa47ae6a8c5, type: 2}
-  buttonSetter:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}

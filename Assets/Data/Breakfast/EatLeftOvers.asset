@@ -15,9 +15,11 @@ MonoBehaviour:
   Name: EatLeftOvers
   Description: Eat Left Overs
   moneyAffect: 0
+  allowanceAffect: 0
+  monthlyPayableaffect: 0
   expenseType: 0
   gain: 1
   happinessAffect: 0
-  financialSecurityAffect: 0
   healthAffect: 0
-  result: 
+  result: 'You heat up the leftovers from yesterday. It''s not the tastiest meal,
+    but it''s something. '

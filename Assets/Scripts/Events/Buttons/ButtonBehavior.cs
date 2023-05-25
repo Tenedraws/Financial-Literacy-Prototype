@@ -9,11 +9,12 @@ public class ButtonBehavior : ScriptableObject
     public string Description;
 
     public float moneyAffect;
+    public float allowanceAffect;
+    public float monthlyPayableaffect; 
     public expenseType expenseType;
     public bool gain;
 
     public float happinessAffect;
-    public float financialSecurityAffect;
     public float healthAffect;
 
     [TextArea]
@@ -22,9 +23,13 @@ public class ButtonBehavior : ScriptableObject
     public void ApplyEffect()
     {
         FinancialAccount.Instance.AffectAccount(moneyAffect, gain, expenseType);
+        FinancialAccount.Instance.AffectAllowance(allowanceAffect);
+        FinancialAccount.Instance.AffectMonthlyPayable(monthlyPayableaffect);
         MainUIElements.Instance.UpdateHappiness(happinessAffect);
-        MainUIElements.Instance.UpdateSecurity(financialSecurityAffect);
+        MainUIElements.Instance.UpdateSecurity();
         MainUIElements.Instance.UpdateHealth(healthAffect);
+        UIManager.Instance.Open(GameUIID.Result);
+        Results.Instance.result.text = result; 
     }
 }
 

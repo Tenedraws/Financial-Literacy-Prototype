@@ -12,15 +12,24 @@ public class MainUIElements : Singleton<MainUIElements>
     [SerializeField]
     Slider health;
 
+    public Text hour;
+
     [SerializeField]
-    Text expenses;
-    Text currentBalance; 
+    Button expenses;
+
+    protected override void Awake()
+    {
+        base.Awake();
+    }
 
     private void Start()
     {
+        FinancialAccount.Instance.AddAllowance();
+        PetStats.Instance.AffectFinancialSecurity();
         happiness.value = PetStats.Instance.getHappiness/100;
-        financialSecurity.value = PetStats.Instance.getFinancialSecurity/100;
+        financialSecurity.value = PetStats.Instance.getFinancialSecurity;
         health.value = PetStats.Instance.getHealth/100;
+        hour.text = $"Time: \n {TimeTracker.Instance.hour}:00";
     }
 
     public void UpdateHappiness(float amount)
@@ -29,10 +38,17 @@ public class MainUIElements : Singleton<MainUIElements>
         happiness.value = PetStats.Instance.getHappiness/100;
     }
 
-    public void UpdateSecurity(float amount)
+    public void UpdateSecurity()
     {
-        PetStats.Instance.AffectFinancialSecurity(amount);
-        financialSecurity.value = PetStats.Instance.getFinancialSecurity/100;
+        PetStats.Instance.AffectFinancialSecurity();
+        if(PetStats.Instance.getFinancialSecurity >= 1)
+        {
+            financialSecurity.value = 1;
+        }
+        else
+        {
+            financialSecurity.value = PetStats.Instance.getFinancialSecurity; 
+        }
     }
 
     public void UpdateHealth(float amount)
