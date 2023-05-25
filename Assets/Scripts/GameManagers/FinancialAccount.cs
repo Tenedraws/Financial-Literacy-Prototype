@@ -19,6 +19,15 @@ public class FinancialAccount : Singleton<FinancialAccount>
         base.Awake();
     }
 
+    private void Start()
+    {
+        //TODO find a better way to initiliaze in future
+        expenses[expenseType.food] = 0;
+        expenses[expenseType.transport] = 0;
+        expenses[expenseType.entertainment] = 0;
+        expenses[expenseType.other] = 0;
+    }
+
     public void AddAllowance()
     {
         currentBalance += allowance;
@@ -35,11 +44,6 @@ public class FinancialAccount : Singleton<FinancialAccount>
 
         if (!gain)
         {
-            if (!expenses.ContainsKey(type))
-            {
-                expenses[type] = 0;
-            }
-
             var expense = Mathf.Abs(amount);
             totalDailyExpense += expense;
             expenses[type] += expense;

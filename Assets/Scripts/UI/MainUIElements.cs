@@ -24,6 +24,7 @@ public class MainUIElements : Singleton<MainUIElements>
 
     private void Start()
     {
+        expenses.onClick.AddListener(Log);
         FinancialAccount.Instance.AddAllowance();
         PetStats.Instance.AffectFinancialSecurity();
         happiness.value = PetStats.Instance.getHappiness/100;
@@ -55,5 +56,11 @@ public class MainUIElements : Singleton<MainUIElements>
     {
         PetStats.Instance.AffectHealth(amount);
         health.value = PetStats.Instance.getHealth/100;
+    }
+
+    void Log()
+    {
+        Time.timeScale = 0f;
+        UIManager.Instance.Open(GameUIID.Expenses);
     }
 }

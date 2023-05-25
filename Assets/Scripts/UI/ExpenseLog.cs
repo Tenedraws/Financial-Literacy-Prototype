@@ -20,6 +20,7 @@ public class ExpenseLog : MonoBehaviour
                    $"Transport Expense: ${FinancialAccount.Instance.expenses[expenseType.transport]} \n" +
                    $"Entertainment Expense: ${FinancialAccount.Instance.expenses[expenseType.entertainment]} \n" +
                    $"Other Expense: ${FinancialAccount.Instance.expenses[expenseType.other]}";
+        closeButton.onClick.AddListener(Close);
     }
 
     void Close()

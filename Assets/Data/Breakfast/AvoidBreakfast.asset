@@ -19,6 +19,6 @@ MonoBehaviour:
   monthlyPayableaffect: 0
   expenseType: 0
   gain: 1
-  happinessAffect: -20
+  happinessAffect: -100
   healthAffect: -15
   result: 'You avoid Breakfast. '
