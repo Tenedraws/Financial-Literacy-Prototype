@@ -19,7 +19,7 @@ MonoBehaviour:
   monthlyPayableaffect: 0
   expenseType: 0
   gain: 1
-  happinessAffect: 0
+  happinessAffect: -10
   healthAffect: 0
   result: 'You heat up the leftovers from yesterday. It''s not the tastiest meal,
-    but it''s something. '
+    but it does fill you up. '

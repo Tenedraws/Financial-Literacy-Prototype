@@ -25,7 +25,6 @@ public class MainUIElements : Singleton<MainUIElements>
     private void Start()
     {
         expenses.onClick.AddListener(Log);
-        FinancialAccount.Instance.AddAllowance();
         PetStats.Instance.AffectFinancialSecurity();
         happiness.value = PetStats.Instance.getHappiness/100;
         financialSecurity.value = PetStats.Instance.getFinancialSecurity;

@@ -57,7 +57,17 @@ public class FinancialAccount : Singleton<FinancialAccount>
 
     public void PayMonthlyPayable()
     {
-        currentBalance -= monthlyPayable;
+        if (currentBalance >= monthlyPayable)
+        {
+            currentBalance -= monthlyPayable;
+        }
+        else
+        {
+            UIManager.Instance.Open(GameUIID.EndScreen);
+            Endscreen.Instance.endText.text = "GAME OVER \n You didn't manage to pay off your monthly fee. Try to be more aware of your finances and spendings and always keep future costs in mind.";
+            return; 
+        }
+        
     }
 }
 

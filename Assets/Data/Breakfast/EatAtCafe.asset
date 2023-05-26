@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: EatAtCafe
   m_EditorClassIdentifier: 
   Name: EatAtCafe
-  Description: Eat at Cafe
-  moneyAffect: -20
+  Description: Eat at Cafe (-$18)
+  moneyAffect: -18
   allowanceAffect: 0
   monthlyPayableaffect: 0
   expenseType: 0
   gain: 0
   happinessAffect: 20
   healthAffect: 10
-  result: You decide to treat yourself by going out to a nearby cafe. Your meal is
-    delicious.
+  result: You decide to treat yourself by going out to the cafe. You come back feeling
+    happy, full and satisfied

@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a121924870e36a0478e66f6042232e90, type: 3}
-  m_Name: AvoidBreakfast
+  m_Name: RunToSchool
   m_EditorClassIdentifier: 
-  Name: Nobreakfast
-  Description: Skip Breakfast
+  Name: RunToSchool
+  Description: Run There
   moneyAffect: 0
   allowanceAffect: 0
   monthlyPayableaffect: 0
   expenseType: 0
   gain: 1
   happinessAffect: -20
-  healthAffect: -15
-  result: 'You decided to skip out on breakfast this morning. '
+  healthAffect: -10
+  result: 'You try running to school. You manage to make it on time, but feel tired
+    for morning period. '

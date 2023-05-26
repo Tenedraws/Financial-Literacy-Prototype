@@ -6,11 +6,12 @@ public class Endscreen : Singleton<Endscreen>
 {
     [SerializeField]
     Button restartButton;
-    public Text endText; 
+    public Text endText;
 
     // Start is called before the first frame update
     void Start()
     {
+        TimeTracker.Instance.gameOver = true;
         restartButton.onClick.AddListener(Restart);
     }
 

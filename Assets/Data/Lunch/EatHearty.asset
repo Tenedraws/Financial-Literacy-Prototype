@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a121924870e36a0478e66f6042232e90, type: 3}
-  m_Name: AvoidBreakfast
+  m_Name: EatHearty
   m_EditorClassIdentifier: 
-  Name: Nobreakfast
-  Description: Skip Breakfast
-  moneyAffect: 0
+  Name: EatHearty
+  Description: Eat a Hearty Meal($-15)
+  moneyAffect: -15
   allowanceAffect: 0
   monthlyPayableaffect: 0
   expenseType: 0
-  gain: 1
-  happinessAffect: -20
-  healthAffect: -15
-  result: 'You decided to skip out on breakfast this morning. '
+  gain: 0
+  happinessAffect: 10
+  healthAffect: 10
+  result: 'You decide to eat a full meal for lunch. You feel full and satisfied. '

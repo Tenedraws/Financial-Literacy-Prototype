@@ -13,10 +13,57 @@ MonoBehaviour:
   m_Name: DayOne
   m_EditorClassIdentifier: 
   events:
-  - time: 10
+  - time: 9
     msg: Breakfast
-    eventDescription: 'It''s time for breakfast! '
+    eventDescription: It's time for breakfast! You know you have some leftovers in
+      the fridge, but a new cafe opened up nearby.
     buttonBehaviors:
     - {fileID: 11400000, guid: 962e74059206b694c9cf518587fa44a9, type: 2}
     - {fileID: 11400000, guid: 294c403f0dd9e3b43bdd342e8ff7a154, type: 2}
     - {fileID: 11400000, guid: 7b6645cc534a1684bb2a1785988ce7a0, type: 2}
+  - time: 10
+    msg: School Transport
+    eventDescription: 'It''s time to head off to school. You''re running a bit late,
+      but might make it if you''re quick enough. '
+    buttonBehaviors:
+    - {fileID: 11400000, guid: c892ab27c9b25a048abe4a068bba68fd, type: 2}
+    - {fileID: 11400000, guid: 303e01e56c89afb4cb0257d1fef8cdb7, type: 2}
+    - {fileID: 11400000, guid: eb4f3f2dfdf20584d9282fe68da4a062, type: 2}
+  - time: 12
+    msg: Lunch
+    eventDescription: Unfortunately, you forgot to pack any lunch today. The school's
+      cafeteria has a wide range of food.
+    buttonBehaviors:
+    - {fileID: 11400000, guid: 4d07bba96aa5d8645bf1e2cab3c5dfb8, type: 2}
+    - {fileID: 11400000, guid: 085f325fbdcdd8142bb9a4e90fb8dc85, type: 2}
+    - {fileID: 11400000, guid: 42bc673793dce0545b9dec73c724ef8e, type: 2}
+  - time: 14
+    msg: Stationary
+    eventDescription: 'Before you go home, you stop by the shop for some stationary.
+      There are other items in the shop that catch your eye though. '
+    buttonBehaviors:
+    - {fileID: 11400000, guid: 89d89da1d5066de409284aea77c6327f, type: 2}
+    - {fileID: 11400000, guid: 3117fe5ab32171a4a93e5e65aa913e0a, type: 2}
+    - {fileID: 11400000, guid: 373e61bb5fedf34468f75a12e36c134c, type: 2}
+  - time: 16
+    msg: Relaxation
+    eventDescription: After school, you find yourself with some free time.
+    buttonBehaviors:
+    - {fileID: 11400000, guid: 909479d2e3fe3ae4da9f70a92a0b2e6d, type: 2}
+    - {fileID: 11400000, guid: 098c6781130af624da76b437ce3c0bd7, type: 2}
+    - {fileID: 11400000, guid: ff87fb3ec45a601498dc74a7db0abf64, type: 2}
+  - time: 18
+    msg: Dinner
+    eventDescription: It's time for dinner. You could go buy some groceries to cook
+      or you could order in or go out to eat.
+    buttonBehaviors:
+    - {fileID: 11400000, guid: d3594286ab53ee44eb8529e246e190b0, type: 2}
+    - {fileID: 11400000, guid: 1b5a19c0937fd3f41918948003814e92, type: 2}
+    - {fileID: 11400000, guid: f46811c74abf1e94696761bca13fa4ab, type: 2}
+  - time: 22
+    msg: Pay Loan
+    eventDescription: It's time to pay off your monthly fee. Are you confident?
+    buttonBehaviors:
+    - {fileID: 11400000, guid: 19255a9229244af4c8b6d12984b40fec, type: 2}
+    - {fileID: 11400000, guid: ad93bb821a697db4e8ff8dead2a55b47, type: 2}
+    - {fileID: 11400000, guid: 3f2e3aea50100694ab2e7e176a5a93bf, type: 2}

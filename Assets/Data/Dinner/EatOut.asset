@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a121924870e36a0478e66f6042232e90, type: 3}
-  m_Name: AvoidBreakfast
+  m_Name: EatOut
   m_EditorClassIdentifier: 
-  Name: Nobreakfast
-  Description: Skip Breakfast
-  moneyAffect: 0
+  Name: EatOut
+  Description: Eat Out(-$50)
+  moneyAffect: -50
   allowanceAffect: 0
   monthlyPayableaffect: 0
   expenseType: 0
-  gain: 1
-  happinessAffect: -20
-  healthAffect: -15
-  result: 'You decided to skip out on breakfast this morning. '
+  gain: 0
+  happinessAffect: 40
+  healthAffect: 0
+  result: You decide to treat yourself and eat out today. You're happy and full by
+    the time you come home.
